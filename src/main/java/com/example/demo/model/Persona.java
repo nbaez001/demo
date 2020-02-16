@@ -1,25 +1,26 @@
 package com.example.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
 public class Persona {
-	@Id
-	@GeneratedValue
-	private Integer id;
-	
-	@Column(name = "nombre", length = 100)
+	private int id;
+	private String dni;
 	private String nombre;
+	private String apellidoPaterno;
+	private String apellidoMaterno;
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 
 	public String getNombre() {
@@ -30,9 +31,20 @@ public class Persona {
 		this.nombre = nombre;
 	}
 
-	@Override
-	public String toString() {
-		return "Persona [id=" + id + ", nombre=" + nombre + "]";
+	public String getApellidoPaterno() {
+		return apellidoPaterno;
+	}
+
+	public void setApellidoPaterno(String apellidoPaterno) {
+		this.apellidoPaterno = apellidoPaterno;
+	}
+
+	public String getApellidoMaterno() {
+		return apellidoMaterno;
+	}
+
+	public void setApellidoMaterno(String apellidoMaterno) {
+		this.apellidoMaterno = apellidoMaterno;
 	}
 
 }

@@ -1,4 +1,6 @@
-package com.example.demo.model;
+package com.empresa.proyecto.model;
+
+import java.util.Date;
 
 public class Persona {
 	private int id;
@@ -6,6 +8,8 @@ public class Persona {
 	private String nombre;
 	private String apellidoPaterno;
 	private String apellidoMaterno;
+	private Date fechaNacimiento;
+	private String sexo;
 
 	public int getId() {
 		return id;
@@ -45,6 +49,22 @@ public class Persona {
 
 	public void setApellidoMaterno(String apellidoMaterno) {
 		this.apellidoMaterno = apellidoMaterno;
+	}
+
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 
 }
